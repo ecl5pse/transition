@@ -65,5 +65,20 @@
 /*    display: list-item;*/
 /*}*/
 
+:root{
+    counter-reset: section ;
+}
 
 
+div{
+
+}
+
+div::before{
+    counter-increment: section;
+    content:"User №" counter(section); ":";
+}
+
+div::after{
+    content: "\";
+}
